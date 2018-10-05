@@ -1,8 +1,8 @@
 {
   "name": "ethansmart/es-for-laravel",
   "minimum-stability": "dev",
-  "version": "1.0.1",
-  "license": "Apache License 2.0",
+  "version": "1.0.0",
+  "license": "MIT",
   "description": "ElasticSearch Client For Laravel",
   "authors": [
     {
