@@ -1,0 +1,23 @@
+{
+  "name": "ethansmart/es-for-laravel",
+  "minimum-stability": "stable",
+  "version": "1.0.3",
+  "description": "ElasticSearch Client For Laravel",
+  "authors": [
+    {
+      "name": "ethan",
+      "email": "luocheng@gmail.com"
+    }
+  ],
+  "support": {
+    "email":    "luocheng@gmail.com"
+  },
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ethansmart\\EsBuilder\\": "src/"
+    }
+  }
+}
