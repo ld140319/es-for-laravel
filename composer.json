@@ -3,11 +3,14 @@
   "minimum-stability": "dev",
   "version": "1.0.0",
   "license": "MIT",
+  "keywords": ["ElasticSearch"],
+  "type": "library",
   "description": "ElasticSearch Client For Laravel",
   "authors": [
     {
       "name": "ethan",
-      "email": "luocheng@gmail.com"
+      "email": "luocheng@gmail.com",
+      "homepage": "https://github.com/roancsu"
     }
   ],
   "support": {
