@@ -9,12 +9,12 @@
   "authors": [
     {
       "name": "ethan",
-      "email": "luocheng@gmail.com",
+      "email": "roancsu@163.com",
       "homepage": "https://github.com/roancsu"
     }
   ],
   "support": {
-    "email":    "luocheng@gmail.com"
+    "email":    "roancsu@roancsu.com"
   },
   "require": {
     "php": ">=5.3.0"

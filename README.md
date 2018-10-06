@@ -7,7 +7,7 @@ EsBuilder 有两种模式
 1. ES ORM Client (ORM模式)：支持Model映射
 2. ES Client (非ORM模式)：支持原生ES
 
-###使用 ES ORM Client
+### 使用 ES ORM Client
 
 首先创建ORM Model
 
@@ -113,7 +113,7 @@ return $result;
 
 ```
 
-###使用 ES Client
+### 使用 ES Client
 
 首先构建 Client
 
@@ -164,4 +164,47 @@ return $result;
 
 其他方法类似
 
-###扩展
+创建Laravel Job 同步数据到 ES
+
+```php
+
+use Ethansmart\EsBuilder\Builder\EsClientBuilder;
+
+class EsService
+{
+    private $client ;
+    public function __construct()
+    {
+        $host = "127.0.0.1";
+        $port = "32800";
+        $this->client = EsClientBuilder::create()
+            ->setHosts($host)
+            ->setPort($port)
+            ->build();
+    }
+
+    public function create($id)
+    {
+        $data = [
+            'index'=>'accounts',
+            'type'=>'person',
+            'id'=>$id,
+            'body'=>[
+                'user'=>str_random(6),
+                'title'=>str_random(12),
+                'desc'=>str_random(16),
+            ]
+        ];
+        try {
+            $result =  $this->client->create($data);
+        } catch (\Exception $e) {
+            return ['code'=>-1, 'msg'=>$e->getMessage()];
+        }
+
+        return $result;
+    }
+}
+
+```
+
+### 扩展
