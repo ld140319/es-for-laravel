@@ -52,6 +52,7 @@ class HttpClient
 
         $headers[] ='X-HTTP-Method-Override: '.$data['method'];
         $headers[] ='Content-Type: application/json';
+        $headers[] = 'Expect:';
         curl_setopt($this->ch, CURLOPT_TIMEOUT, 500);
         curl_setopt($this->ch, CURLOPT_HEADER, 0);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $headers);
